@@ -10,6 +10,11 @@ filetype indent plugin on
 let g:airline_powerline_fonts=1
 let g:airline_solarized_bg='dark'
 set t_Co=256
+" java configs :/
+
+let java_highlight_java_lang_ids=1
+let java_highlight_functions="style"
+
 " base vim configs
 set tabstop=4
 set softtabstop=4
