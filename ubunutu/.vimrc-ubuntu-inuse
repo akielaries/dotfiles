@@ -1,0 +1,94 @@
+" execute pathogen package manager
+" execute pathogen#infect()
+" vundle pkg mgr
+    set nocompatible
+    filetype off
+    " set runtime path to include vundle and initialise
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    " let vundle manage vundle
+    Plugin 'VundleVim/Vundle.vim'
+
+    " plugins using vundle
+        " rainbow plugin for curly braces
+        Plugin 'frazrepo/vim-rainbow'
+        let g:rainbow_active=1
+
+        " NERDTree plugin for file exploration
+        Plugin 'preservim/nerdtree'
+        let NERDTreeShowHidden=1
+
+        " open on vim start
+        autocmd VimEnter * NERDTree
+        " close when exiting vim
+        autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+        " gitgutter incorporating changes from previous commit
+        Plugin 'airblade/vim-gitgutter'
+        let g:gitgutter_enabled=1
+        let g:gitgutter_toggle=1
+        let g:gitgutter_signsenabled=1
+        let g:gitgutter_signstoggle=1
+
+        " for specific syntax highlighting
+        Plugin 'sheerun/vim-polyglot'
+            " for arduino syntax highlighting
+            Plugin 'sudar/vim-arduino-syntax'
+
+
+    " ** add plugins before this line **
+    call vundle#end()
+    filetype plugin indent on
+" dracula vim package configs
+    let g:dracula_italic=0
+    packadd! dracula
+    syntax on
+
+" colorschemes
+    " colorscheme atom-dark-256
+    " colorscheme jellybeans
+    colorscheme dracula
+
+" vim airline conigs
+    let g:airline_powerline_fonts=1
+    let g:airline_solarized_bg='dark'
+    set t_Co=256
+
+" java configs :/
+    let java_highlight_java_lang_ids=1
+    let java_highlight_functions="style"
+    let java_highlight_all=1
+    highlight link javaScopeDecl Statement
+    highlight link javaType Type
+    highlight link javaDocTags PreProc
+
+" tabs/indentation
+    set tabstop=4
+    set softtabstop=4
+    set shiftwidth=4
+    set smarttab
+    set smartindent
+    set autoindent
+    set expandtab
+
+" folds
+    set foldmethod=indent
+    "
+
+" text rendering
+    set encoding=utf-8
+    set linebreak
+    syntax enable
+
+" UI configs
+    set number
+    set si
+    set laststatus=2
+    set ruler
+    set wildmenu
+
+" misc configs
+    set noswapfile
+    set updatetime=100
+
+

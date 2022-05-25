@@ -1,0 +1,31 @@
+
+
+syntax on
+filetype plugin indent on
+set number
+" tabs/indentation
+    set tabstop=4
+    set softtabstop=4
+    set shiftwidth=4
+    set smarttab
+    set smartindent
+    set autoindent
+    set expandtab
+" text rendering
+    set encoding=utf-8
+    set linebreak
+    syntax enable
+
+" UI configs
+    set number
+    set si
+    set laststatus=2
+    set ruler
+    set wildmenu
+
+" misc configs
+    set noswapfile
+    set updatetime=100
+
+
+
