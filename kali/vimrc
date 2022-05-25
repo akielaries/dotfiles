@@ -30,17 +30,21 @@
         let g:gitgutter_signsenabled=1
         let g:gitgutter_signstoggle=1
 
+        " for specific syntax highlighting
+        Plugin 'sheerun/vim-polyglot'
+            " for arduino syntax highlighting
+            Plugin 'sudar/vim-arduino-syntax'
+
+
     " ** add plugins before this line **
     call vundle#end()
     filetype plugin indent on
-
 
 " dracula vim package configs
     let g:dracula_italic=0
     packadd! dracula
     syntax on
     filetype plugin indent on
-
 
 " colorschemes
     " colorscheme atom-dark-256
